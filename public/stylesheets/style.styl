@@ -1,3 +1,5 @@
+//imports
+
 @import 'font.css'
 @import nib
 @import mixins
@@ -5,6 +7,32 @@
 
 
 
+
+
+// start this shit
+
+global-reset()
+
+*, *:before, *:after
+	box-sizing border-box
+
+
 body
-	background blue
+	background white
 	font()
+
+.wrapper
+	padding 0 20px
+
+
+nav.main
+	background pink
+	color white
+	clearfix()
+	h1
+		font-size 50px
+		float left
+	.shuffle
+		float right
+		
+		
