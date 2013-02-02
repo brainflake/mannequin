@@ -1,8 +1,7 @@
+@import 'font.css';
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
+  background: #00f;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.2em;
 }
