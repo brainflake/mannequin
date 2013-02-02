@@ -7,63 +7,35 @@
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <script type="text/javascript" src="contentflow.js" load="carousel"></script>
+    <script type="text/javascript" src="contentflow.js" ></script>
 </head>
-<body><div class="top ContentFlow">
-	            <div class="loadIndicator"><div class="indicator"></div></div>
-	            <div class="flow">
-					<img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-					<img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-					<img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-                      <!-- {{#each tops}}
-	                <img class="item" src="{{this}}" title="Your_Image_Title"/>
-                      {{/each}} -->
-	                <!-- img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-	                <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-	                <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-	               <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-	                <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-	                <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-	                <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/ -->
-	            </div>
-	            <div class="globalCaption"></div>
-	            <div class="scrollbar"><div class="slider"><div class="position"></div></div></div>
-	        </div>
-
+<body>
 
     {{{ body }}}
 
     <div class="mannequin">
     	<div class="wrapper">
-	    	<!-- <div class="modelHead">
+	    	<div class="modelHead">
 	    		<span class="face">FACE</span>
-	    	</div> -->
+	    	</div>
+			<div class="top ContentFlow">
+		    <div class="loadIndicator"><div class="indicator"></div></div>
+		        <div class="flow">
+					<img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
+					<img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
+					<img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
+					<!-- {{#each tops}}
+					<img class="item" src="{{this}}" title="Your_Image_Title"/>
+					{{/each}} -->
+					<img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
+					<img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
+					<img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
+					<img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
+		        </div>
+		    <div class="globalCaption"></div>
+		    <div class="scrollbar"><div class="slider"><div class="position"></div></div></div>
+		</div>
 
-	    	
-
-
-			<!-- <div class="bottom ContentFlow">
-	            <div class="loadIndicator"><div class="indicator"></div></div>
-	            <div class="flow">
-                      {{#each bottoms}}
-	                <img class="item" src="{{this}}" title="Your_Image_Title"/>
-                      {{/each}}
-	            </div>
-	            <div class="globalCaption"></div>
-	            <div class="scrollbar"><div class="slider"><div class="position"></div></div></div>
-	        </div>
-
-
-	        <div class="shoes ContentFlow">
-	            <div class="loadIndicator"><div class="indicator"></div></div>
-	            <div class="flow">
-                      {{#each shoes}}
-	                <img class="item" src="{{this}}" title="Your_Image_Title"/>
-                      {{/each}}
-	            </div>
-	            <div class="globalCaption"></div>
-	            <div class="scrollbar"><div class="slider"><div class="position"></div></div></div>
-	        </div> -->
     	</div>
     </div>
 
@@ -87,14 +59,7 @@
 	</nav>
 
 	<script>
-        ContentFlowGlobal.setAddOnConf("carousel", {
-        shownItems: 3,
-        circularFlow : false,  //number of visible items
-        // showCaption: true // show item caption
-        // width: 100,     // relative item width
-        // height: 100,    // relative item height
-        // space: 0.4      // relative item spacing
-    });
+        // var myNewFlow = new ContentFlow('ContentFlow', { reflectionHeight: 0, circularFlow: false } ) ;
     </script>
 
 </body>
