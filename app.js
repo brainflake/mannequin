@@ -16,7 +16,7 @@ var app = express();
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
-  app.engine('handlebars', handlebars());
+  app.engine('handlebars', handlebars({defaultLayout: 'main'}));
   app.set('view engine', 'handlebars');
   app.use(express.favicon());
   app.use(express.logger('dev'));
