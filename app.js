@@ -8,6 +8,7 @@ var express = require('express')
   , user = require('./routes/user')
   , http = require('http')
   , handlebars = require('express3-handlebars')
+  , stylus = require('stylus')
   , path = require('path');
 
 var app = express();
@@ -23,6 +24,7 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
+  app.use(stylus.middleware({ src: __dirname + '/public' }));
   app.use(express.static(path.join(__dirname, 'public')));
 });
 
