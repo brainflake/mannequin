@@ -9,6 +9,7 @@
     "express": "3.0.4",
     "express3-handlebars": "0.2.0",
     "handlebars": "1.0.8",
+    "stylus": "0.32.0",
     "tumblr": "0.1.0"
   },
   "subdomain": "brainflake",
