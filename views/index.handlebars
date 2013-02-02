@@ -28,15 +28,15 @@ var	carousel,
 	page,
 	slides;
 
+slides = [];
 carousel = new SwipeView('.top.row', {
 	numberOfPages: slides.length,
 	hastyPageFlip: true
 });
 
-slides = []
 $('.images .item').each(function() {
   console.log($(this).html());
-  slides.append($(this).html());	
+  slides.push($(this).html());	
 });
 
 // Load initial data
