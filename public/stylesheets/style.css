@@ -1,132 +1,17 @@
 @import 'font.css';
-i[class^=icon] {
-  position: relative;
-}
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-family: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-body {
-  line-height: 1;
-  color: #000;
-  background: #fff;
-}
-ol,
-ul {
-  list-style: none;
-}
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  vertical-align: middle;
-}
-caption,
-th,
-td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-a img {
-  border: none;
-}
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 body {
   background: #fff;
-  font-family: "futura-pt", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.2em;
   font-size: 100%;
 }
 .wrapper {
   padding: 2%;
 }
 nav.main {
-  position: fixed;
-  bottom: 0;
-  ((null)): 0;
+  fixed: bottom;
   width: 100%;
-  background: #f0b;
+  background: #ffc0cb;
   color: #fff;
   padding: 1em 0;
-  zoom: 1;
-}
-nav.main:before,
-nav.main:after {
-  content: "";
-  display: table;
-}
-nav.main:after {
-  clear: both;
 }
 nav.main h1 {
   font-size: 100px;
@@ -139,35 +24,22 @@ nav.main .shuffle i {
   font-size: 100px;
 }
 .mannequin {
-  width: 90%;
   margin: 0 auto;
   background: #f00;
 }
 .mannequin .modelHead {
-  width: 20%;
   margin: 0 auto;
-  background: #14cccc;
+  background: #00f;
 }
 .mannequin .modelHead .face {
   width: 50%;
   display: block;
   margin: 0 auto;
   background: #fff;
-  -webkit-border-radius: 100px;
   border-radius: 100px;
 }
-.mannequin .row {
-  width: 3000px;
-  margin: 0;
-  overflow: scroll;
-  height: 200px;
-  background: #f0b;
-  white-space: pre;
-}
 .mannequin .row .item {
-  float: left;
-  width: 100%;
-  background: #ffda19;
+  background: #ff0;
 }
 .mannequin .row .item .info {
   display: none;

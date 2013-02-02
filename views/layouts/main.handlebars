@@ -11,7 +11,22 @@
     <script type="text/javascript" src="/javascript/jquery.hammer.js"></script>
     <script type="text/javascript" src="/contentflow.js" load="carousel"></script>
 </head>
-<body>
+<body><div class="top ContentFlow">
+	            <div class="loadIndicator"><div class="indicator"></div></div>
+	            <div class="flow">
+	                <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
+	                <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
+	               <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
+	                <!--  <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
+	                <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
+	                <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
+	                <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/> -->
+	            </div>
+	            <div class="globalCaption"></div>
+	            <div class="scrollbar"><div class="slider"><div class="position"></div></div></div>
+	        </div>
+
+
     {{{ body }}}
 
     <div class="mannequin">
@@ -20,20 +35,7 @@
 	    		<span class="face">FACE</span>
 	    	</div> -->
 
-	    	<div class="top ContentFlow">
-	            <div class="loadIndicator"><div class="indicator"></div></div>
-	            <div class="flow">
-	                <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-	                <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-	                <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-	                <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-	                <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-	                <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-	                <img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-	            </div>
-	            <div class="globalCaption"></div>
-	            <div class="scrollbar"><div class="slider"><div class="position"></div></div></div>
-	        </div>
+	    	
 
 
 			<!-- <div class="bottom ContentFlow">
@@ -90,10 +92,11 @@
 
 	<script>
         ContentFlowGlobal.setAddOnConf("carousel", {
-        shownItems: 3,  //number of visible items
-        showCaption: true // show item caption
-        width: 100,     // relative item width
-        height: 100,    // relative item height
+        shownItems: 3,
+        circularFlow : false,  //number of visible items
+        // showCaption: true // show item caption
+        // width: 100,     // relative item width
+        // height: 100,    // relative item height
         space: 0.4      // relative item spacing
     });
     </script>
