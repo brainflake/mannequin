@@ -139,7 +139,9 @@ nav.main .shuffle i {
   font-size: 100px;
 }
 .splash {
-  font-size: 300px;
+  font-size: 150px;
+  text-align: center;
+  margin: 200px 0;
 }
 .mannequin {
   margin: 0 auto;

@@ -11,3 +11,9 @@ exports.index = function(req, res){
 exports.splash = function(req, res){
   res.render('splash.handlebars', { title: 'Mannequin' });
 };
+
+
+
+exports.buy = function(req, res){
+  res.render('buy.handlebars', { title: 'Mannequin' });
+};
