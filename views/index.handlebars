@@ -1,1 +1,18 @@
 <h1>{{ title }}</h1>
+
+<script type="text/javascript">
+  $('h1')
+    .hammer()
+    .bind("doubletap", function(ev) {
+      console.log(ev);
+    })
+    .bind("hold", function(ev) {
+      console.log(ev);
+    })
+    .bind("swipe", function(ev) {
+      console.log(ev);
+    })
+    .bind("tap", function(ev) {
+      console.log(ev);
+    });
+</script>
