@@ -105,6 +105,7 @@ body {
   font-family: "futura-pt", sans-serif;
   font-weight: 600;
   letter-spacing: 0.2em;
+  font-size: 100%;
 }
 .wrapper {
   padding: 2%;
@@ -116,6 +117,7 @@ nav.main {
   width: 100%;
   background: #f0b;
   color: #fff;
+  padding: 1em 0;
   zoom: 1;
 }
 nav.main:before,
@@ -127,12 +129,41 @@ nav.main:after {
   clear: both;
 }
 nav.main h1 {
-  font-size: 50px;
+  font-size: 100px;
   float: left;
 }
 nav.main .shuffle {
   float: right;
 }
 nav.main .shuffle i {
-  font-size: 50px;
+  font-size: 100px;
+}
+.mannequin {
+  width: 90%;
+}
+.mannequin .modelHead {
+  width: 20%;
+  margin: 0 auto;
+  background: #14cccc;
+}
+.mannequin .modelHead .face {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  background: #fff;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+}
+.mannequin .row {
+  overflow: scroll;
+  height: 200px;
+  background: pinkx;
+}
+.mannequin .row .item {
+  float: left;
+  width: 400px;
+  background: #ffda19;
+}
+.mannequin .row .item img {
+  max-width: 100%;
 }
