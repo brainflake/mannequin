@@ -8,16 +8,17 @@ var express = require('express')
   , user = require('./routes/user')
   , http = require('http')
   , cons = require('consolidate')
+  , handlebars = require('express3-handlebars')
   , path = require('path');
 
 var app = express();
 
-app.engine('handlebars', cons.handlbars);
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
-  app.set('view engine', 'jade');
+  app.engine('handlebars', handlebars());
+  app.set('view engine', 'handlebars');
   app.use(express.favicon());
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
