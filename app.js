@@ -7,7 +7,6 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
-  , cons = require('consolidate')
   , handlebars = require('express3-handlebars')
   , path = require('path');
 
