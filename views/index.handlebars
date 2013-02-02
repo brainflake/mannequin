@@ -3,26 +3,69 @@
 	    	<div class="modelHead">
 	    		<span class="face">FACE</span>
 	    	</div>
-			<div class="top ContentFlow">
-		    <div class="loadIndicator"><div class="indicator"></div></div>
-		        <div class="flow">
-					<img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-					<img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-					<img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-					<!-- {{#each tops}}
-					<img class="item" src="{{this}}" title="Your_Image_Title"/>
-					{{/each}} -->
-					<img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-					<img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-					<img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-					<img class="item" src="http://placekitten.com/640/640" title="Your_Image_Title"/>
-		        </div>
-		    <div class="globalCaption"></div>
-		    <div class="scrollbar"><div class="slider"><div class="position"></div></div></div>
-		</div>
+			<div class="top row">
 
-    	</div>
+			</div>
+		    <div class="images" style="display: none;">
+			    <div class="item"><img src="http://placekitten.com/g/640/640" alt=""></div>
+				<div class="item"><img src="http://placekitten.com/g/640/640" alt=""></div>
+				<div class="item"><img src="http://placekitten.com/g/640/640" alt=""></div>
+				<div class="item"><img src="http://placekitten.com/g/640/640" alt=""></div>
+				<div class="item"><img src="http://placekitten.com/g/640/640" alt=""></div>
+				<div class="item"><img src="http://placekitten.com/g/640/640" alt=""></div>
+				<div class="item"><img src="http://placekitten.com/g/640/640" alt=""></div>
+				<div class="item"><img src="http://placekitten.com/g/640/640" alt=""></div>
+				<div class="item"><img src="http://placekitten.com/g/640/640" alt=""></div>
+				<div class="item"><img src="http://placekitten.com/g/640/640" alt=""></div>
+		    </div>
+		</div>
     </div>
+
+<script type="text/javascript">
+var	carousel,
+	el,
+	i,
+	page,
+	slides;
+
+carousel = new SwipeView('.top.row', {
+	numberOfPages: slides.length,
+	hastyPageFlip: true
+});
+
+slides = []
+$('.images .item').each(function() {
+  console.log($(this).html());
+  slides.append($(this).html());	
+});
+
+// Load initial data
+ for (i=0; i<3; i++) {
+	page = i==0 ? slides.length-1 : i-1;
+
+	el = document.createElement('span');
+	el.innerHTML = slides[page];
+	carousel.masterPages[i].appendChild(el)
+} 
+
+carousel.onFlip(function () {
+	var el,
+		upcoming,
+		i;
+
+	for (i=0; i<3; i++) {
+		upcoming = carousel.masterPages[i].dataset.upcomingPageIndex;
+
+		if (upcoming != carousel.masterPages[i].dataset.pageIndex) {
+			el = carousel.masterPages[i].querySelector('span');
+			el.innerHTML = slides[upcoming];
+		}
+	}
+});
+
+</script>
+
+
 
 <script type="text/javascript">
 /* 
