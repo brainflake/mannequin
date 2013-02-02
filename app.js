@@ -7,9 +7,12 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
+  , cons = require('consolidate')
   , path = require('path');
 
 var app = express();
+
+app.engine('handlebars', cons.handlbars);
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
