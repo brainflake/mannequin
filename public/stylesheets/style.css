@@ -156,13 +156,3 @@ nav.main .shuffle i {
   -webkit-border-radius: 100px;
   border-radius: 100px;
 }
-.mannequin .row {
-  width: 3000px;
-  margin: 0;
-  overflow: scroll;
-  height: 200px;
-  background: #f0b;
-}
-.mannequin .row .item .info {
-  display: none;
-}
