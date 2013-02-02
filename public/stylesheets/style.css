@@ -106,7 +106,14 @@ body {
   font-weight: 600;
   letter-spacing: 0.2em;
 }
+.wrapper {
+  padding: 2%;
+}
 nav.main {
+  position: fixed;
+  bottom: 0;
+  ((null)): 0;
+  width: 100%;
   background: #f0b;
   color: #fff;
   zoom: 1;
@@ -125,4 +132,7 @@ nav.main h1 {
 }
 nav.main .shuffle {
   float: right;
+}
+nav.main .shuffle i {
+  font-size: 50px;
 }
