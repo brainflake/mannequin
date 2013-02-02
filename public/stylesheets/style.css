@@ -140,6 +140,8 @@ nav.main .shuffle i {
 }
 .mannequin {
   width: 90%;
+  margin: 0 auto;
+  background: #f00;
 }
 .mannequin .modelHead {
   width: 20%;
@@ -155,15 +157,18 @@ nav.main .shuffle i {
   border-radius: 100px;
 }
 .mannequin .row {
+  width: 3000px;
+  margin: 0;
   overflow: scroll;
   height: 200px;
-  background: pinkx;
+  background: #f0b;
+  white-space: pre;
 }
 .mannequin .row .item {
   float: left;
-  width: 400px;
+  width: 100%;
   background: #ffda19;
 }
-.mannequin .row .item img {
-  max-width: 100%;
+.mannequin .row .item .info {
+  display: none;
 }
