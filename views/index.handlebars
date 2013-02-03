@@ -73,6 +73,7 @@ for (i=0; i<3; i++) {
 	el.src = tops[page].img;
         el.width = 240;
         el.height = 240;
+        el['data-buy'] = tops[page].buyLink;
 	carouselTops.masterPages[i].appendChild(el);
 }
 
@@ -84,6 +85,7 @@ for (i=0; i<3; i++) {
 	el.src = bottoms[page].img;
         el.width = 240;
         el.height = 240;
+        el['data-buy'] = bottoms[page].buyLink;
 	carouselBottoms.masterPages[i].appendChild(el);
 }
 
@@ -95,6 +97,7 @@ for (i=0; i<3; i++) {
 	el.src = shoes[page].img;
         el.width = 240;
         el.height = 240;
+        el['data-buy'] = shoes[page].buyLink;
 	carouselShoes.masterPages[i].appendChild(el);
 }
 
