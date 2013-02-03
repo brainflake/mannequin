@@ -121,7 +121,7 @@ nav.main {
   width: 100%;
   background: #f0b;
   color: #fff;
-  padding: 1em 0;
+  padding: 1.5em 1em;
   zoom: 1;
 }
 nav.main:before,
@@ -133,14 +133,18 @@ nav.main:after {
   clear: both;
 }
 nav.main h1 {
-  font-size: 100px;
+  font-size: 90px;
   float: left;
 }
 nav.main .shuffle {
   float: right;
+  text-align: center;
+  -webkit-border-radius: 160px;
+  border-radius: 160px;
 }
 nav.main .shuffle i {
-  font-size: 100px;
+  font-size: 80px;
+  text-shadow: 0 5px 0 #f0b, 0 8px 0 #fff;
 }
 .splash {
   font-size: 150px;
@@ -148,12 +152,12 @@ nav.main .shuffle i {
   margin: 200px 0;
 }
 .mannequin {
-  margin: 30px auto 0;
+  margin: 20px auto 0;
   height: 600px;
 }
 .mannequin .modelHead {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   margin: 0 auto;
   text-align: -999em;
 }
@@ -162,14 +166,14 @@ nav.main .shuffle i {
   height: 100%;
   display: block;
   margin: 0 auto;
-  background: #ffda19;
+  background: #f0b;
   -webkit-border-radius: 100px;
   border-radius: 100px;
 }
 .mannequin .row {
   border: none;
   background: #fff;
-  margin: 0 auto;
+  margin: 20px auto;
   height: 240px;
 }
 .buy .item {
@@ -194,4 +198,5 @@ nav.main .shuffle i {
 }
 .buy img {
   max-width: 100%;
+  height: auto;
 }
