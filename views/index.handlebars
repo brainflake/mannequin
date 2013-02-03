@@ -48,6 +48,7 @@
     </div>
 
 <script type="text/javascript">
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 	var carouselTops, carouselBottoms, carouselShoes;
 
     function initTops(tops) {
@@ -81,8 +82,12 @@
 		upcoming = carouselTops.masterPages[i].dataset.upcomingPageIndex;
 
 		if (upcoming != carouselTops.masterPages[i].dataset.pageIndex) {
-			el = carouselTops.masterPages[i].querySelector('span');
-			el.innerHTML = tops[upcoming];
+			el = carouselTops.masterPages[i].querySelector('img');
+	  		el.src = tops[upcoming].img;
+          		el.width = 240;
+          		el.height = 248;
+          		el['data-buy'] = tops[upcoming].buyLink;
+			//el.innerHTML = tops[upcoming];
 		}
 	  }
         });
@@ -119,8 +124,12 @@
 		upcoming = carouselBottoms.masterPages[i].dataset.upcomingPageIndex;
 
 		if (upcoming != carouselBottoms.masterPages[i].dataset.pageIndex) {
-			el = carouselBottoms.masterPages[i].querySelector('span');
-			el.innerHTML = bottoms[upcoming];
+			el = carouselBottoms.masterPages[i].querySelector('img');
+	  		el.src = bottoms[upcoming].img;
+          		el.width = 240;
+          		el.height = 240;
+          		el['data-buy'] = bottoms[upcoming].buyLink;
+		//	el.innerHTML = bottoms[upcoming];
 		}
 	  }
         });
@@ -157,8 +166,12 @@
 		upcoming = carouselShoes.masterPages[i].dataset.upcomingPageIndex;
 
 		if (upcoming != carouselShoes.masterPages[i].dataset.pageIndex) {
-			el = carouselShoes.masterPages[i].querySelector('span');
-			el.innerHTML = shoes[upcoming];
+			el = carouselShoes.masterPages[i].querySelector('img');
+			el.src = shoes[upcoming].img;
+        		el.width = 240;
+        		el.height = 128;
+        		el['data-buy'] = shoes[upcoming].buyLink;
+			// el.innerHTML = shoes[upcoming];
 		}
 	}
 
