@@ -16,119 +16,105 @@
     </div>
 
 <script type="text/javascript">
-var	carouselTops,
-	carouselBottoms,
-	carouselShoes,
-	el,
+    function initTops(tops) {
+      var el,
 	i,
 	page;
 
-        var tops = [
-{{#each tops}}
-	{
-	  img: '{{this}}',
-	  buyLink: ''
-	},
-{{/each}}
-        ];
+        carouselTops = new SwipeView('.top', {
+	  numberOfPages: tops.length,
+	  hastyPageFlip: true
+        });
 
-        var bottoms = [
-{{#each bottoms}}
-	{
-	  img: '{{this}}',
-	  buyLink: ''
-	},
-{{/each}}
-	]; 
+        // Load initial data
+        for (i=0; i<3; i++) {
+	  page = i==0 ? tops.length-1 : i-1;
 
-	var shoes = [
-{{#each shoes}}
-	{
-	  img: '{{this}}',
-	  buyLink: ''
-	},
-{{/each}}
-	];
+	  el = document.createElement('img');
+	  el.src = tops[page].img;
+          el.width = 240;
+          el.height = 240;
+          el['data-buy'] = tops[page].buyLink;
+	  carouselTops.masterPages[i].appendChild(el);
+        }
 
-carouselTops = new SwipeView('.top', {
-	numberOfPages: tops.length,
-	hastyPageFlip: true
-});
-
-carouselBottoms = new SwipeView('.bottom', {
-	numberOfPages: bottoms.length,
-	hastyPageFlip: true
-});
-
-carouselShoes = new SwipeView('.shoes', {
-	numberOfPages: shoes.length,
-	hastyPageFlip: true
-});
-
-// Load initial data
-for (i=0; i<3; i++) {
-	page = i==0 ? tops.length-1 : i-1;
-
-	el = document.createElement('img');
-	el.src = tops[page].img;
-        el.width = 240;
-        el.height = 240;
-	carouselTops.masterPages[i].appendChild(el);
-}
-
-// Load initial data
-for (i=0; i<3; i++) {
-	page = i==0 ? bottoms.length-1 : i-1;
-
-	el = document.createElement('img');
-	el.src = bottoms[page].img;
-        el.width = 240;
-        el.height = 240;
-	carouselBottoms.masterPages[i].appendChild(el);
-}
-
-// Load initial data
-for (i=0; i<3; i++) {
-	page = i==0 ? shoes.length-1 : i-1;
-
-	el = document.createElement('img');
-	el.src = shoes[page].img;
-        el.width = 240;
-        el.height = 240;
-	carouselShoes.masterPages[i].appendChild(el);
-}
-
-carouselTops.onFlip(function () {
-	var el,
+        carouselTops.onFlip(function () {
+	  var el,
 		upcoming,
 		i;
 
-	for (i=0; i<3; i++) {
+	  for (i=0; i<3; i++) {
 		upcoming = carouselTops.masterPages[i].dataset.upcomingPageIndex;
 
 		if (upcoming != carouselTops.masterPages[i].dataset.pageIndex) {
 			el = carouselTops.masterPages[i].querySelector('span');
 			el.innerHTML = tops[upcoming];
 		}
-	}
-});
+	  }
+        });
+    }
 
-carouselBottoms.onFlip(function () {
-	var el,
+    function initBottoms(bottoms) {
+      var el,
+	i,
+	page;
+
+        carouselBottoms = new SwipeView('.bottom', {
+	  numberOfPages: bottoms.length,
+	  hastyPageFlip: true
+        });
+
+        // Load initial data
+        for (i=0; i<3; i++) {
+	  page = i==0 ? bottoms.length-1 : i-1;
+
+	  el = document.createElement('img');
+	  el.src = bottoms[page].img;
+          el.width = 240;
+          el.height = 240;
+          el['data-buy'] = bottoms[page].buyLink;
+	  carouselBottoms.masterPages[i].appendChild(el);
+        }
+
+        carouselBottoms.onFlip(function () {
+	  var el,
 		upcoming,
 		i;
 
-	for (i=0; i<3; i++) {
+	  for (i=0; i<3; i++) {
 		upcoming = carouselBottoms.masterPages[i].dataset.upcomingPageIndex;
 
 		if (upcoming != carouselBottoms.masterPages[i].dataset.pageIndex) {
 			el = carouselBottoms.masterPages[i].querySelector('span');
 			el.innerHTML = bottoms[upcoming];
 		}
-	}
-});
+	  }
+        });
+    }
 
-carouselShoes.onFlip(function () {
+    function initShoes(shoes) {
+      var el,
+	i,
+	page;
+
+      carouselShoes = new SwipeView('.shoes', {
+	numberOfPages: shoes.length,
+	hastyPageFlip: true
+      });
+
+      // Load initial data
+      for (i=0; i<3; i++) {
+	page = i==0 ? shoes.length-1 : i-1;
+
+	el = document.createElement('img');
+	el.src = shoes[page].img;
+        el.width = 240;
+        el.height = 240;
+        el['data-buy'] = shoes[page].buyLink;
+	carouselShoes.masterPages[i].appendChild(el);
+      }
+
+      carouselShoes.onFlip(function () {
 	var el,
 		upcoming,
 		i;
@@ -141,5 +127,43 @@ carouselShoes.onFlip(function () {
 			el.innerHTML = shoes[upcoming];
 		}
 	}
-});
+
+      });
+   }
+
+/* var	carouselTops,
+	carouselBottoms,
+	carouselShoes;*/
+
+
+        var tops = [
+          {{#each tops}}
+	    {
+	      img: '{{this}}',
+	      buyLink: ''
+	    },
+          {{/each}}
+        ];
+
+        var bottoms = [
+          {{#each bottoms}}
+	    {
+	      img: '{{this}}',
+	      buyLink: ''
+	    },
+          {{/each}}
+	]; 
+
+	var shoes = [
+          {{#each shoes}}
+	    {
+	      img: '{{this}}',
+	      buyLink: ''
+	    },
+          {{/each}}
+	];
+
+initTops(tops);
+initBottoms(bottoms);
+initShoes(shoes);
 </script>
