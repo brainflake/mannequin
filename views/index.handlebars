@@ -136,8 +136,8 @@
         var tops = [
           {{#each tops}}
 	    {
-	      img: '{{this}}',
-	      buyLink: ''
+	      img: '{{this.url}}',
+	      buyLink: '{{this.buyLink}}'
 	    },
           {{/each}}
         ];
@@ -145,8 +145,8 @@
         var bottoms = [
           {{#each bottoms}}
 	    {
-	      img: '{{this}}',
-	      buyLink: ''
+	      img: '{{this.url}}',
+	      buyLink: '{{this.buyLink}}'
 	    },
           {{/each}}
 	]; 
@@ -154,8 +154,8 @@
 	var shoes = [
           {{#each shoes}}
 	    {
-	      img: '{{this}}',
-	      buyLink: ''
+	      img: '{{this.url}}',
+	      buyLink: '{{this.buyLink}}'
 	    },
           {{/each}}
 	];
