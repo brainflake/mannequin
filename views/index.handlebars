@@ -25,19 +25,28 @@ var	carouselTops,
 
         var tops = [
 {{#each tops}}
-	'{{this}}',
+	{
+	  img: '{{this}}',
+	  buyLink: ''
+	},
 {{/each}}
         ];
 
         var bottoms = [
 {{#each bottoms}}
-	'{{this}}',
+	{
+	  img: '{{this}}',
+	  buyLink: ''
+	},
 {{/each}}
 	]; 
 
 	var shoes = [
 {{#each shoes}}
-	'{{this}}',
+	{
+	  img: '{{this}}',
+	  buyLink: ''
+	},
 {{/each}}
 	];
 
@@ -61,7 +70,7 @@ for (i=0; i<3; i++) {
 	page = i==0 ? tops.length-1 : i-1;
 
 	el = document.createElement('img');
-	el.src = tops[page];
+	el.src = tops[page].img;
         el.width = 240;
         el.height = 240;
 	carouselTops.masterPages[i].appendChild(el);
@@ -72,7 +81,7 @@ for (i=0; i<3; i++) {
 	page = i==0 ? bottoms.length-1 : i-1;
 
 	el = document.createElement('img');
-	el.src = bottoms[page];
+	el.src = bottoms[page].img;
         el.width = 240;
         el.height = 240;
 	carouselBottoms.masterPages[i].appendChild(el);
@@ -83,7 +92,7 @@ for (i=0; i<3; i++) {
 	page = i==0 ? shoes.length-1 : i-1;
 
 	el = document.createElement('img');
-	el.src = shoes[page];
+	el.src = shoes[page].img;
         el.width = 240;
         el.height = 240;
 	carouselShoes.masterPages[i].appendChild(el);
