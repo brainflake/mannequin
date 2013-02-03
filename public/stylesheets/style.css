@@ -163,7 +163,7 @@ nav.main .shuffle i {
   display: none;
 }
 .mannequin {
-  margin: 50px auto 0;
+  margin: 12% auto 0;
   height: 600px;
 }
 .mannequin .modelHead {
@@ -206,7 +206,7 @@ nav.main .shuffle i {
   top: 40%;
   ((null)): 0;
   font-size: 80px;
-  top: 280px;
+  top: 27%;
 }
 .mannequin nav span {
   opacity: 0.2;
@@ -219,10 +219,10 @@ nav.main .shuffle i {
   filter: none;
 }
 .mannequin nav:nth-child(2) {
-  top: 540px;
+  top: 47%;
 }
 .mannequin nav:nth-child(3) {
-  top: 740px;
+  top: 62%;
 }
 .mannequin nav .left {
   position: absolute;
