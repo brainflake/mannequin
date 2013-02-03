@@ -26,29 +26,31 @@ var	carousel,
 	el,
 	i,
 	page,
-	slides;
+	slides = [
+/*		'<strong>Swipe</strong> to know more &gt;&gt;&gt;<br>Or scroll down for <em>Lorem Ipsum</em>',
+		'1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.',
+		'2. A robot must obey the orders given to it by human beings, except where such orders would conflic',*/
+		'http://placekitten.com/g/640/640',
+		'http://placekitten.com/g/640/640',
+		'http://placekitten.com/g/640/640',
+		'http://placekitten.com/g/640/640'
+	];
 
-slides = [];
-carousel = new SwipeView('.top.row', {
+carousel = new SwipeView('.top', {
 	numberOfPages: slides.length,
 	hastyPageFlip: true
 });
 
-$('.images .item').each(function() {
-  console.log($(this).html());
-  slides.push($(this).html());	
-});
-
-slides = ['test','two'];
-
 // Load initial data
- for (i=0; i<3; i++) {
+for (i=0; i<3; i++) {
 	page = i==0 ? slides.length-1 : i-1;
 
-	el = document.createElement('span');
-	el.innerHTML = slides[page];
-	carousel.masterPages[i].appendChild(el)
-} 
+	el = document.createElement('img');
+	el.src = slides[page];
+        el.width = 640;
+        el.height = 640;
+	carousel.masterPages[i].appendChild(el);
+}
 
 carousel.onFlip(function () {
 	var el,
@@ -64,7 +66,6 @@ carousel.onFlip(function () {
 		}
 	}
 });
-
 </script>
 
 

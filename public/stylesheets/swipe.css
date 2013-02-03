@@ -1,0 +1,25 @@
+
+#swipeview-slider > div {
+	position:relative;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+	overflow:hidden;
+}
+
+#swipeview-slider span {
+	-webkit-box-sizing:border-box;
+	display:block;
+	text-align:center;
+	font-size:1.4em;
+	padding:0 20px;
+}
+.top {
+	width: 640px;
+	min-width:20px;
+	height:640px;
+	background:#ddd;
+	border-top:1px solid #aaa;
+	border-bottom:1px solid #aaa;
+}
