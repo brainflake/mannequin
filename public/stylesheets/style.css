@@ -163,7 +163,7 @@ nav.main .shuffle i {
   display: none;
 }
 .mannequin {
-  margin: 12% auto 0;
+  margin: 5% auto 0;
   height: 600px;
 }
 .mannequin .modelHead {
@@ -219,10 +219,10 @@ nav.main .shuffle i {
   filter: none;
 }
 .mannequin nav:nth-child(2) {
-  top: 47%;
+  top: 50%;
 }
 .mannequin nav:nth-child(3) {
-  top: 62%;
+  top: 70%;
 }
 .mannequin nav .left {
   position: absolute;
@@ -277,4 +277,32 @@ nav.main .shuffle i {
   left: 40px;
   font-size: 100px;
   color: #f0b;
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+  .mannequin {
+    margin: 12% auto 0;
+  }
+  .mannequin nav {
+    position: absolute;
+    top: 40%;
+    ((null)): 0;
+    font-size: 80px;
+    top: 27%;
+  }
+  .mannequin nav span {
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  }
+  .mannequin nav span:hover {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+  .mannequin nav:nth-child(2) {
+    top: 45%;
+  }
+  .mannequin nav:nth-child(3) {
+    top: 61%;
+  }
 }
