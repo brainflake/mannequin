@@ -148,12 +148,14 @@ nav.main .shuffle i {
   margin: 200px 0;
 }
 .mannequin {
-  margin: 0 auto;
+  margin: 30px auto 0;
+  height: 600px;
 }
 .mannequin .modelHead {
   width: 100px;
   height: 100px;
   margin: 0 auto;
+  text-align: -999em;
 }
 .mannequin .modelHead .face {
   width: 100%;
@@ -165,7 +167,10 @@ nav.main .shuffle i {
   border-radius: 100px;
 }
 .mannequin .row {
+  border: none;
+  background: #fff;
   margin: 0 auto;
+  height: 240px;
 }
 .buy .item {
   margin: 5% 20%;
