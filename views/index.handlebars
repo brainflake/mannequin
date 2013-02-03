@@ -169,17 +169,17 @@
 			carouselTops.destroy();
 			carouselTops = null;
 			$('.top').html('');
-			initTops(tops);
+			initTops(_.shuffle(tops));
 
 			carouselBottoms.destroy();
 			carouselBottoms = null;
 			$('.bottom').html('');
-			initBottoms(bottoms);
+			initBottoms(_.shuffle(bottoms));
 
 			carouselShoes.destroy();
 			carouselShoes = null;
 			$('.shoes').html('');
-			initShoes(shoes);
+			initShoes(_.shuffle(shoes));
 		});
 	});
 </script>
