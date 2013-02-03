@@ -197,6 +197,10 @@
 	initShoes(shoes);
 
         $(function() {
+		$('#swipeview-slider img').on('click', function() {
+			document.location = '/buy?url=' + encodeURIComponent($(this).attr('src'));
+		});
+
 		$('.icon-bolt').on('click', function() {
 			carouselTops.destroy();
 			carouselTops = null;

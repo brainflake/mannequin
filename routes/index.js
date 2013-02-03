@@ -39,5 +39,7 @@ exports.splash = function(req, res){
 
 
 exports.buy = function(req, res){
-  res.render('buy.handlebars', { title: 'Mannequin' });
+  var url = req.param('url');
+
+  res.render('buy.handlebars', { title: 'Mannequin', url: url });
 };
