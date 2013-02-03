@@ -197,7 +197,15 @@
 	initShoes(shoes);
 
         $(function() {
-		$('#swipeview-slider img').on('click', function() {
+		$('.top').on('click', 'img', function() {
+			document.location = '/buy?url=' + encodeURIComponent($(this).attr('src'));
+		});
+
+		$('.bottom').on('click', 'img', function() {
+			document.location = '/buy?url=' + encodeURIComponent($(this).attr('src'));
+		});
+
+		$('.shoes').on('click', 'img', function() {
 			document.location = '/buy?url=' + encodeURIComponent($(this).attr('src'));
 		});
 
