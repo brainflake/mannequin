@@ -168,8 +168,8 @@
         var tops = [
           {{#each tops}}
 	    {
-	      img: '{{this}}',
-	      buyLink: ''
+	      img: '{{this.url}}',
+	      buyLink: '{{this.buyLink}}'
 	    },
           {{/each}}
         ];
@@ -177,8 +177,8 @@
         var bottoms = [
           {{#each bottoms}}
 	    {
-	      img: '{{this}}',
-	      buyLink: ''
+	      img: '{{this.url}}',
+	      buyLink: '{{this.buyLink}}'
 	    },
           {{/each}}
 	]; 
@@ -186,8 +186,8 @@
 	var shoes = [
           {{#each shoes}}
 	    {
-	      img: '{{this}}',
-	      buyLink: ''
+	      img: '{{this.url}}',
+	      buyLink: '{{this.buyLink}}'
 	    },
           {{/each}}
 	];
@@ -197,6 +197,18 @@
 	initShoes(shoes);
 
         $(function() {
+		$('.top').on('click', 'img', function() {
+			document.location = '/buy?url=' + encodeURIComponent($(this).attr('src'));
+		});
+
+		$('.bottom').on('click', 'img', function() {
+			document.location = '/buy?url=' + encodeURIComponent($(this).attr('src'));
+		});
+
+		$('.shoes').on('click', 'img', function() {
+			document.location = '/buy?url=' + encodeURIComponent($(this).attr('src'));
+		});
+
 		$('.icon-bolt').on('click', function() {
 			carouselTops.destroy();
 			carouselTops = null;
