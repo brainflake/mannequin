@@ -147,9 +147,20 @@ nav.main .shuffle i {
   text-shadow: 0 5px 0 #f0b, 0 8px 0 #fff;
 }
 .splash {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   font-size: 150px;
   text-align: center;
-  margin: 200px 0;
+  padding: 400px 0;
+  background: #f0b;
+  color: #fff;
+  height: 100%;
+}
+.splash + nav {
+  display: none;
 }
 .mannequin {
   margin: 20px auto 0;
@@ -176,6 +187,14 @@ nav.main .shuffle i {
   margin: 20px auto;
   height: 240px;
 }
+.buy {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+}
 .buy .item {
   margin: 5% 20%;
   font-family: "garamond-premier-pro", serif;
@@ -186,17 +205,28 @@ nav.main .shuffle i {
   display: block;
   background: #f0b;
   color: #fff;
-  padding: 10px;
+  padding: 0 0 30px;
+  margin: 0 0 40px;
   text-align: center;
   font-family: "futura-pt", sans-serif;
   font-weight: 600;
   letter-spacing: 0.2em;
+  font-size: 60px;
   text-transform: uppercase;
 }
 .buy .buybutton i {
-  font-size: 100px;
+  font-size: 80px;
+  top: 15px;
+  left: 20px;
 }
 .buy img {
   max-width: 100%;
   height: auto;
+}
+.buy .back {
+  position: absolute;
+  top: 40%;
+  left: 40px;
+  font-size: 100px;
+  color: #f0b;
 }

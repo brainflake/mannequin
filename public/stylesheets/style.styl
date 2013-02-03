@@ -48,9 +48,19 @@ nav.main
 			text-shadow 0 5px 0 pink, 0 8px 0 white
 
 .splash
+	absolute top bottom
+	left 0
+	right 0
 	font-size 150px
 	text-align center
-	margin 200px 0
+	padding 400px 0
+	background pink
+	color white
+	height 100%
+	
+
+.splash + nav
+	display none
 
 .mannequin	
 	margin 20px auto 0
@@ -74,6 +84,10 @@ nav.main
 		height 240px
 
 .buy
+	absolute top bottom
+	left 0
+	right 0
+	background white
 	.item
 		margin 5% 20%
 		font-serif()
@@ -82,19 +96,27 @@ nav.main
 		display block
 		background pink
 		color white
-		padding 10px
+		padding 0 0 30px
+		margin 0 0 40px
 		text-align center
 		font()
+		font-size 60px
 		text-transform uppercase
 		i
-			font-size 100px
+			font-size 80px
+			top 15px
+			left 20px
 	img
 		max-width 100%
 		height auto
-	
-
-
-
+	& + nav
+		// background yellow
+		// i.icon-bolt
+		// 	text-shadow 0 5px 0 blue, 0 8px 0 white
+	.back
+		absolute top 40% left 40px
+		font-size 100px
+		color pink
 
 
 
