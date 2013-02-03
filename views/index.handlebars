@@ -16,6 +16,8 @@
     </div>
 
 <script type="text/javascript">
+	var carouselTops, carouselBottoms, carouselShoes;
+
     function initTops(tops) {
       var el,
 	i,
@@ -131,11 +133,6 @@
       });
    }
 
-/* var	carouselTops,
-	carouselBottoms,
-	carouselShoes;*/
-
-
         var tops = [
           {{#each tops}}
 	    {
@@ -163,7 +160,15 @@
           {{/each}}
 	];
 
-initTops(tops);
-initBottoms(bottoms);
-initShoes(shoes);
+	initTops(tops);
+	initBottoms(bottoms);
+	initShoes(shoes);
+
+        $(function() {
+		$('.icon-bolt').on('click', function() {
+			console.log('clicked');
+			carouselTops.destroy();
+			initTops(tops);
+		});
+	});
 </script>
