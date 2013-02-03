@@ -163,7 +163,7 @@ nav.main .shuffle i {
   display: none;
 }
 .mannequin {
-  margin: 20px auto 0;
+  margin: 50px auto 0;
   height: 600px;
 }
 .mannequin .modelHead {
@@ -186,6 +186,52 @@ nav.main .shuffle i {
   background: #fff;
   margin: 20px auto;
   height: 240px;
+}
+.mannequin .row.bottom {
+  margin-bottom: 0;
+}
+.mannequin .row.shoes {
+  margin: 0 auto;
+  position: relative;
+  top: -20px;
+}
+.mannequin .row.shoes img {
+  max-width: 170px;
+  height: auto;
+}
+.mannequin nav {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  ((null)): 0;
+  font-size: 80px;
+  top: 280px;
+}
+.mannequin nav span {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+}
+.mannequin nav span:hover {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+.mannequin nav:nth-child(2) {
+  top: 540px;
+}
+.mannequin nav:nth-child(3) {
+  top: 740px;
+}
+.mannequin nav .left {
+  position: absolute;
+  left: 80px;
+  ((null)): 0;
+}
+.mannequin nav .right {
+  position: absolute;
+  right: 100px;
+  ((null)): 0;
 }
 .buy {
   position: absolute;
