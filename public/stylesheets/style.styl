@@ -63,7 +63,7 @@ nav.main
 	display none
 
 .mannequin	
-	margin 12% auto 0
+	margin 5% auto 0
 	height 600px
 	.modelHead
 		width 130px
@@ -103,10 +103,10 @@ nav.main
 		top 27%
 		&:nth-child(2)
 			// background blue
-			top 47%
+			top 50%
 		&:nth-child(3)
 			// background blue
-			top 62%
+			top 70%
 		.left
 			absolute left 80px
 		.right
@@ -148,6 +148,23 @@ nav.main
 		font-size 100px
 		color pink
 
+@media(-webkit-min-device-pixel-ratio: 2)
+	.mannequin
+		margin 12% auto 0
+		nav
+			absolute top 40%
+			font-size 80px
+			span
+				opacity .2
+				&:hover
+					opacity 1
+			top 27%
+			&:nth-child(2)
+				// background blue
+				top 45%
+			&:nth-child(3)
+				// background blue
+				top 61%
 
 
 
