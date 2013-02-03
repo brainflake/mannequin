@@ -3,7 +3,11 @@
 	<div class="wrapper">
 		<div class="item">
 			<div class="buybutton">
+				{{#if buy}}
+				<a href="{{buy_link}}" class="button">
+				{{else}}
 				<a href="#" class="button">
+				{{/if}}
 					<i class="icon-plus"></i>
 					Buy
 				</a>
