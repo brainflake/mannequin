@@ -198,6 +198,7 @@ nav.main .shuffle i {
 .mannequin .row.shoes img {
   max-width: 170px;
   height: auto;
+  pointer-events: none;
 }
 .mannequin nav {
   width: 100%;
@@ -208,9 +209,9 @@ nav.main .shuffle i {
   top: 280px;
 }
 .mannequin nav span {
-  opacity: 0.4;
-  filter: alpha(opacity=40);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
 }
 .mannequin nav span:hover {
   opacity: 1;
